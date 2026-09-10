@@ -37,17 +37,12 @@ redirect_from:
 - Mathematical biology
 
 ## Publications
-{% include base_path %}
+
 ### Journal Articles
 {% for post in site.publications reversed %}
-  {% if post.pubtype == 'journal' %}
-    {% include archive-single.html %}
-  {% endif %}
+{% if post.venue contains "Journal" %}
+{% include archive-single-cv.html %}
+{% endif %}
 {% endfor %}
 
-### Preprints
-{% for post in site.publications reversed %}
-  {% if post.pubtype == 'preprint' %}
-    {% include archive-single.html %}
-  {% endif %}
-{% endfor %}
+
